@@ -8,6 +8,7 @@ window.addEventListener("load", function() {
   let favMusic= document.getElementById("music-type");
   let favMovie= document.getElementById("movie-type");
   let nameSpan= document.getElementById("name-span");
+  let languageSpan= document.getElementById("language-span")
   let resultInfo= document.getElementById("result-info");
 
   function handleClickHere () {
@@ -15,20 +16,26 @@ window.addEventListener("load", function() {
     formDiv.classList.remove("invisible");
   }
 
+  function submitSelection () {
+    formDiv.classList.add("invisible");
+    result-info.classList.remove("invisible");
+    nameSpan.innerText= nameInput;
+    languageSpan.innerText= languageInput;
+  }
+
   function handleSelect(event) {
     event.preventDefault();
-    const name= document.getElementById("input-name").value;
+    const nameInput= document.getElementById("input-name").value;
+    const languageInput= document.getElementById("resultLang").value;
     const select1=document.getElementById("pet-type").value;
     const select2=document.getElementById("color-type").value;
     const select3=document.getElementById("holiday-type").value;
     const select4=document.getElementById("music-type").value;
     const select5=document.getElementById("movie-type").value;
-
- 
-
-
   }
 
   document.getElementById ("select-form").addEventListener("submit", handleSelect);
   document.getElementById ("click-here").addEventListener("click", handleClickHere);
+
+  
 });
