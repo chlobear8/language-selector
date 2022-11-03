@@ -8,6 +8,7 @@ window.addEventListener("load", function() {
   let favMusic= document.getElementById("music-type");
   let favMovie= document.getElementById("movie-type");
   let nameSpan= document.getElementById("name-span");
+  let resultInfo= document.getElementById("result-info");
 
   function handleClickHere () {
     head.classList.add("invisible");
@@ -23,10 +24,11 @@ window.addEventListener("load", function() {
     const select4=document.getElementById("music-type").value;
     const select5=document.getElementById("movie-type").value;
 
+ 
 
-}
-window.addEventListener("load", function() {
+
+  }
+
   document.getElementById ("select-form").addEventListener("submit", handleSelect);
-});
 
-WIP
+});
