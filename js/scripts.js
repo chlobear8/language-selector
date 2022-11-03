@@ -30,5 +30,5 @@ window.addEventListener("load", function() {
   }
 
   document.getElementById ("select-form").addEventListener("submit", handleSelect);
-
+  document.getElementById ("click-here").addEventListener("click", handleClickHere);
 });
