@@ -3,11 +3,6 @@ window.addEventListener("load", function() {
   const btn= document.getElementById("submit");
   let head= document.getElementById("header");
   let formDiv= document.getElementById("form");
-  let favPet= document.getElementById("pet-type");
-  let favColor= document.getElementById("color-type");
-  let favHoliday= document.getElementById("holiday-type");
-  let favMusic= document.getElementById("music-type");
-  let favMovie= document.getElementById("movie-type");
   let nameSpan= document.getElementById("name-span");
   let languageSpan= document.getElementById("language-span")
   let resultInfo= document.getElementById("result-info");
@@ -20,11 +15,11 @@ window.addEventListener("load", function() {
   function handleSelect(event) {
     event.preventDefault();
     const nameInput= document.getElementById("input-name").value;
-    const select1=document.getElementById("pet-type").value;
-    const select2=document.getElementById("color-type").value;
-    const select3=document.getElementById("holiday-type").value;
-    const select4=document.getElementById("music-type").value;
-    const select5=document.getElementById("movie-type").value;
+    const favPet=document.getElementById("pet-type").value;
+    const favColor=document.getElementById("color-type").value;
+    const favHoliday=document.getElementById("holiday-type").value;
+    const favMusic=document.getElementById("music-type").value;
+    const favMovie=document.getElementById("movie-type").value;
     let languageInput= "python";
     let resultDiv= document.getElementById("result-info");
     resultDiv.setAttribute("class", "invisible");
