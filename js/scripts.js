@@ -1,11 +1,9 @@
 window.addEventListener("load", function() {
-  const clickHere= document.getElementById("click here");
-  const btn= document.getElementById("submit");
-  let head= document.getElementById("header");
-  let formDiv= document.getElementById("form");
-  let nameSpan= document.getElementById("name-span");
-  let languageSpan= document.getElementById("language-span")
-  let resultInfo= document.getElementById("result-info");
+  const head= document.getElementById("header");
+  const formDiv= document.getElementById("form");
+  const nameSpan= document.getElementById("name-span");
+  const languageSpan= document.getElementById("language-span");
+  const resultInfo= document.getElementById("result-info");
 
   function handleClickHere () {
     head.classList.add("invisible");
@@ -22,9 +20,9 @@ window.addEventListener("load", function() {
     const favMovie=document.getElementById("movie-type").value;
     let languageInput= "python";
 
-    let rubyTotal=0
-    let javascriptTotal=0
-    let pythonTotal=0
+    let rubyTotal=0;
+    let javascriptTotal=0;
+    let pythonTotal=0;
 
     if (favPet==="dog") {
       rubyTotal += 1;
@@ -42,6 +40,30 @@ window.addEventListener("load", function() {
       pythonTotal += 1;
      }
 
+     if (favHoliday==="christmas") {
+      rubyTotal += 1;
+     } else if (favHoliday==="easter") {
+      javascriptTotal += 1;
+     } else {
+      pythonTotal += 1;
+     }
+
+     if (favMusic==="pop") {
+      rubyTotal += 1;
+     } else if (favMusic==="country") {
+      javascriptTotal += 1;
+     } else {
+      pythonTotal += 1;
+     }
+
+     if (favMovie==="horror") {
+      rubyTotal += 1;
+     } else if (favMovie==="comedy") {
+      javascriptTotal += 1;
+     } else {
+      pythonTotal += 1;
+     }
+
      if (rubyTotal >= javascriptTotal && rubyTotal >= pythonTotal) {
       languageInput = "Ruby";
      } else if (javascriptTotal >= rubyTotal && javascriptTotal >= pythonTotal) {
@@ -50,7 +72,6 @@ window.addEventListener("load", function() {
       languageInput= "Python";
      }
     let resultDiv= document.getElementById("result-info");
-    resultDiv.setAttribute("class", "invisible");
     nameSpan.innerText= nameInput;
     languageSpan.innerText= languageInput;
     resultInfo.classList.remove("invisible");
