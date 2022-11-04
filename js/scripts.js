@@ -16,22 +16,24 @@ window.addEventListener("load", function() {
     formDiv.classList.remove("invisible");
   }
 
-  function submitSelection () {
-    formDiv.classList.addAttribute("invisible");
-    result-info.classList.removeAttribute("invisible");
-    nameSpan.innerText= nameInput;
-    languageSpan.innerText= languageInput;
-  }
-
   function handleSelect(event) {
     event.preventDefault();
-    const nameInput= document.getElementById("input-name").value;
-    const languageInput= document.getElementById("resultLang").value;
+    const nameInput= document.getElementById("name-span").value;
+    const languageInput= document.getElementById("language-span").value;
     const select1=document.getElementById("pet-type").value;
     const select2=document.getElementById("color-type").value;
     const select3=document.getElementById("holiday-type").value;
     const select4=document.getElementById("music-type").value;
     const select5=document.getElementById("movie-type").value;
+
+    let resultDiv= document.getElementById("result-info");
+    resultDiv.setAttribute("class", "innvisible");
+    let nameSpan.innerText= nameInput;
+    let languageSpan.innerText= languageInput;
+
+    if ("submit") {
+      resultDiv.removeAttribute("class");
+    }
   }
 
   document.getElementById ("select-form").addEventListener("submit", handleSelect);
