@@ -17,8 +17,8 @@ window.addEventListener("load", function() {
   }
 
   function submitSelection () {
-    formDiv.classList.add("invisible");
-    result-info.classList.remove("invisible");
+    formDiv.classList.addAttribute("invisible");
+    result-info.classList.removeAttribute("invisible");
     nameSpan.innerText= nameInput;
     languageSpan.innerText= languageInput;
   }
