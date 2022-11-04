@@ -5,11 +5,6 @@ window.addEventListener("load", function() {
   const languageSpan= document.getElementById("language-span");
   const resultInfo= document.getElementById("result-info");
 
-  function handleClickHere () {
-    head.classList.add("invisible");
-    formDiv.classList.remove("invisible");
-  }
-
   function handleSelect(event) {
     event.preventDefault();
     const nameInput= document.getElementById("input-name").value;
@@ -71,10 +66,15 @@ window.addEventListener("load", function() {
      } else {
       languageInput= "Python";
      }
-    let resultDiv= document.getElementById("result-info");
-    nameSpan.innerText= nameInput;
-    languageSpan.innerText= languageInput;
+
+    nameSpan.innerText= nameInput +"!";
+    languageSpan.innerText= languageInput +".";
     resultInfo.classList.remove("invisible");
+  }
+
+  function handleClickHere () {
+    head.classList.add("invisible");
+    formDiv.classList.remove("invisible");
   }
 
   document.getElementById ("select-form").addEventListener("submit", handleSelect);
