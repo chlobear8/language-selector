@@ -1,5 +1,6 @@
 window.addEventListener("load", function() {
   const clickHere= document.getElementById("click here");
+  const btn= document.getElementById("submit");
   let head= document.getElementById("header");
   let formDiv= document.getElementById("form");
   let favPet= document.getElementById("pet-type");
@@ -39,5 +40,4 @@ window.addEventListener("load", function() {
   document.getElementById ("select-form").addEventListener("submit", handleSelect);
   document.getElementById ("click-here").addEventListener("click", handleClickHere);
 
-  
 });
