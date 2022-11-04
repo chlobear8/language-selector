@@ -21,14 +21,15 @@ window.addEventListener("load", function() {
     const favMusic=document.getElementById("music-type").value;
     const favMovie=document.getElementById("movie-type").value;
     let languageInput= "python";
+
+    if (favPet==="cat") {
+      languageInput= "ruby";
+    }
     let resultDiv= document.getElementById("result-info");
     resultDiv.setAttribute("class", "invisible");
     nameSpan.innerText= nameInput;
     languageSpan.innerText= languageInput;
-
-    if ("submit") {
-      resultDiv.removeAttribute("class");
-    }
+    resultInfo.classList.remove("invisible");
   }
 
   document.getElementById ("select-form").addEventListener("submit", handleSelect);
