@@ -5,8 +5,13 @@
 body {
   margin: 0;
   font-family:Georgia, 'Times New Roman', Times, serif;
-  color:bisque;
-  background-color: ;
+  color:red;
+  background-color: black;
+  background-image: url(../img/garage.jpg);
+  background-size: cover;
+  background-position: 0-100px;
+  height: 100vh;
+  display: flow-root;
 }
 
 .btn {
@@ -19,6 +24,34 @@ body {
   cursor: pointer;
 }
 
-#header {
-  background-image: url()
+#header{
+  background-color: black;
+  color: red;
+  width: 400px;
+  margin-top: 30vh;
+  margin-left: 130vh;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+#main-header {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+#sub-header {
+  margin: .25em 0;
+}
+
+.call-to-action {
+  font-size: .5rem;
+  margin-bottom: 0;
+}
+
+#click-here {
+  background-color: grey;
+}
+
+#click-here:hover {
+  background-color: white;
 }
