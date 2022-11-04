@@ -22,9 +22,13 @@ window.addEventListener("load", function() {
     const favMovie=document.getElementById("movie-type").value;
     let languageInput= "python";
 
-    if (favPet==="cat") {
+    if (favPet==="dog" || favPet==="cat" || favColor==="red") {
       languageInput= "ruby";
-    }
+     } else if (favPet==="bird") {
+      languageInput= "javascript"
+     } else {
+      languageInput= "python"
+     }
     let resultDiv= document.getElementById("result-info");
     resultDiv.setAttribute("class", "invisible");
     nameSpan.innerText= nameInput;
