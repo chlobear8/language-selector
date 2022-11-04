@@ -22,12 +22,32 @@ window.addEventListener("load", function() {
     const favMovie=document.getElementById("movie-type").value;
     let languageInput= "python";
 
-    if (favPet==="dog" || favPet==="cat" || favColor==="red") {
-      languageInput= "ruby";
-     } else if (favPet==="bird") {
-      languageInput= "javascript"
+    let rubyTotal=0
+    let javascriptTotal=0
+    let pythonTotal=0
+
+    if (favPet==="dog") {
+      rubyTotal += 1;
+     } else if (favPet==="cat") {
+      javascriptTotal += 1;
      } else {
-      languageInput= "python"
+      pythonTotal += 1;
+     }
+
+     if (favColor==="red") {
+      rubyTotal += 1;
+     } else if (favColor==="blue") {
+      javascriptTotal += 1;
+     } else {
+      pythonTotal += 1;
+     }
+
+     if (rubyTotal >= javascriptTotal && rubyTotal >= pythonTotal) {
+      languageInput = "Ruby";
+     } else if (javascriptTotal >= rubyTotal && javascriptTotal >= pythonTotal) {
+      languageInput = "JavaScript";
+     } else {
+      languageInput= "Python";
      }
     let resultDiv= document.getElementById("result-info");
     resultDiv.setAttribute("class", "invisible");
